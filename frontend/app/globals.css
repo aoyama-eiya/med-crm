@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #1D1D1F;
+
+  /* Mac Theme Colors */
+  --mac-sidebar: #F5F5F7;
+  --mac-border: #E5E5E5;
+  --mac-accent: #007AFF;
+  --mac-text: #1D1D1F;
+  --mac-text-secondary: #86868B;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-mac-sidebar: var(--mac-sidebar);
+  --color-mac-border: var(--mac-border);
+  --color-mac-accent: var(--mac-accent);
+  --color-mac-text: var(--mac-text);
+  --color-mac-text-secondary: var(--mac-text-secondary);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Noto Sans JP", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
