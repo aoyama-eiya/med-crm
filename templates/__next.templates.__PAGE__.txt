@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[97367,["/med-crm/_next/static/chunks/ff1a16fafef87110.js","/med-crm/_next/static/chunks/a2dfb6fc5208ab9b.js"],"OutletBoundary"]
 3:"$Sreact.suspense"
-0:{"buildId":"jXxsJdjHFyyg_CzooD2HL","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex flex-col items-center justify-center h-full text-mac-text-secondary gap-4","children":[["$","span",null,{"className":"material-symbols-rounded text-6xl opacity-20","children":"edit_note"}],["$","p",null,{"className":"text-lg font-bold","children":"テンプレート管理 (準備中)"}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"rPq27x0mhckmbwvGT3FJG","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex flex-col items-center justify-center h-full text-mac-text-secondary gap-4","children":[["$","span",null,{"className":"material-symbols-rounded text-6xl opacity-20","children":"edit_note"}],["$","p",null,{"className":"text-lg font-bold","children":"テンプレート管理 (準備中)"}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
 4:null
