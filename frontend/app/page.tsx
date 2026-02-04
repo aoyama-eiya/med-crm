@@ -35,7 +35,7 @@ const generateTrends = (days: number, isForecast = false) => {
   return data
 }
 
-const COLORS = ['#007AFF', '#5E5CE6', '#30B0C7', '#FF2D55']
+const COLORS = ['#007AFF', '#5E5CE6', '#30B0C7', '#FF2D55', '#AF52DE']
 
 export default function Dashboard() {
   const [period, setPeriod] = useState(7)
@@ -67,8 +67,12 @@ export default function Dashboard() {
     { label: '月間配信数', value: stats.month_messages, icon: 'forward_to_inbox', color: 'text-pink-600' },
   ]
 
-  const reservationData = [
-    { name: 'LINE予約', value: 65 }, { name: 'Web予約', value: 25 }, { name: '電話予約', value: 10 },
+  const treatmentData = [
+    { name: '虫歯治療', value: 35 },
+    { name: '定期検診', value: 30 },
+    { name: 'クリーニング', value: 20 },
+    { name: '矯正歯科', value: 10 },
+    { name: 'その他', value: 5 },
   ]
 
   const genreData = [
@@ -198,12 +202,12 @@ export default function Dashboard() {
 
           {/* Pie Chart */}
           <div className="h-[400px] bg-white p-6 border border-gray-300 shadow-sm flex flex-col break-inside-avoid">
-            <h3 className="text-lg font-bold text-mac-text mb-4 border-l-4 border-cyan-500 pl-3">予約経路</h3>
+            <h3 className="text-lg font-bold text-mac-text mb-4 border-l-4 border-cyan-500 pl-3">診療内容内訳</h3>
             <div className="flex-1 min-h-0 w-full relative">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
-                    data={reservationData}
+                    data={treatmentData}
                     cx="50%"
                     cy="50%"
                     innerRadius="60%"
@@ -212,7 +216,7 @@ export default function Dashboard() {
                     dataKey="value"
                     stroke="none"
                   >
-                    {reservationData.map((_, index) => (
+                    {treatmentData.map((_, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
@@ -222,7 +226,7 @@ export default function Dashboard() {
               </ResponsiveContainer>
               <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none pb-8">
                 <span className="text-4xl font-extrabold text-mac-text">
-                  {reservationData.reduce((a, b) => a + b.value, 0)}
+                  {treatmentData.reduce((a, b) => a + b.value, 0)}%
                 </span>
                 <span className="text-xs text-gray-400 uppercase mt-1">Total</span>
               </div>
